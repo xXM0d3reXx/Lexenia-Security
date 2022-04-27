@@ -3,18 +3,18 @@ const {
 } = require("discord.js");
 module.exports = {
     name: 'extra',
-    description: 'Deez nuts extra cream in yo mouth',
+    description: 'Wishing a user happy birthday',
     execute: async (client, message, args, prefix, Discord) => {
         const fail = new MessageEmbed()
-        .setTitle(`**Moderation** ➽║ **extra**`)
-        .setColor("RED")
-        .setDescription("Mit diesem Befehl kann ein Teammitglied einem Mitglied alles gute wünschen.")
-        .addFields(
-            { name: `\`Anwendung\``, value: `➽ #extra @User\n➽ #extra UserId`, inline: true},
-            { name: `\`Beispiel\``, value: `➽ #extra ${client.user}\n➽ #extra ${client.user.id}`, inline: true},
-            { name: `\`Benötigte Permissions\``, value: "➽ ADMINISTRATOR"}
-        )
-        .setTimestamp();
+            .setTitle(`**Moderation** ➽║ **extra**`)
+            .setColor("RED")
+            .setDescription("Mit diesem Befehl kann ein Teammitglied einem Mitglied alles gute wünschen.")
+            .addFields(
+                { name: `\`Anwendung\``, value: `➽ #extra @User\n➽ #extra UserId`, inline: true },
+                { name: `\`Beispiel\``, value: `➽ #extra ${client.user}\n➽ #extra ${client.user.id}`, inline: true },
+                { name: `\`Benötigte Permissions\``, value: "➽ ADMINISTRATOR" }
+            )
+            .setTimestamp();
         if (message.channel.type !== "DM") {
 
             if (message && !message.author.bot) {
@@ -22,7 +22,7 @@ module.exports = {
                 let toWarn = (message.mentions.members.first() || message.guild.members.cache.get(args[0]));
                 const guild = client.guilds.cache.get("851071074736144415");
                 const channel = guild.channels.cache.get("928973424779481128");
-                if(!toWarn) return message.reply({ embeds: [fail] }).catch(console.error());
+                if (!toWarn) return message.reply({ embeds: [fail] }).catch(console.error());
 
                 if (toWarn) {
                     const embed = new Discord.MessageEmbed()

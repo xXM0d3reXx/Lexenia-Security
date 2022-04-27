@@ -21,8 +21,8 @@ module.exports = {
                     {
                         SEND_MESSAGES: null,
                     }
-               )
-            }    
+                )
+            }
         })
         return message.channel.send(`<a:LX_haken:912459313518379028> ➽║ Alle Channel in (»🎀DER TREFFPUNKT) wurden entsperrt.`).catch(console.error())
     }

@@ -11,7 +11,7 @@ module.exports = {
                 .setColor('RED')
                 .setDescription("Tut uns leid, Wir haben uns dazu entschieden dein Vorschlag nicht anzunehmen.")
                 .setImage('https://cdn.discordapp.com/attachments/954125799122956358/958358329162362930/Untitled.png')
-                message.channel.send({
+            message.channel.send({
                 embeds: [embed]
             }).catch(console.error());
             message.delete().catch(console.error())

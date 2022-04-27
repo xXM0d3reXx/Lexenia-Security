@@ -7,16 +7,16 @@ module.exports = {
     description: 'Bans a member',
     execute: async (client, message, prefix, Discord) => {
         const fail = new MessageEmbed()
-        .setTitle(`**Moderation** ➽║ **ban**`)
-        .setColor("RED")
-        .setDescription("Mit diesem Befehl kann ein Teammitglied ein Mitglied bannen.")
-        .addFields(
-            { name: `\`Anwendung\``, value: `➽ #ban @User <Ban Grund>\n➽ #ban UserId <Ban Grund>`, inline: true},
-            { name: `\`Beispiel\``, value: `➽ #ban ${client.user} Server Werbung\n➽ #ban ${client.user.id} Server Werbung`, inline: true},
-            { name: `\`Benötigte Permissions\``, value: "➽ BAN_MEMBERS"}
-        )
-        .setTimestamp()
-        .setFooter(`${message.author.tag} | Zeichen wie "<" und ">" bitte weglassen.`);
+            .setTitle(`**Moderation** ➽║ **ban**`)
+            .setColor("RED")
+            .setDescription("Mit diesem Befehl kann ein Teammitglied ein Mitglied bannen.")
+            .addFields(
+                { name: `\`Anwendung\``, value: `➽ #ban @User <Ban Grund>\n➽ #ban UserId <Ban Grund>`, inline: true },
+                { name: `\`Beispiel\``, value: `➽ #ban ${client.user} Server Werbung\n➽ #ban ${client.user.id} Server Werbung`, inline: true },
+                { name: `\`Benötigte Permissions\``, value: "➽ BAN_MEMBERS" }
+            )
+            .setTimestamp()
+            .setFooter(`${message.author.tag} | Zeichen wie "<" und ">" bitte weglassen.`);
         let messageArray = message.content.split(" ")
         let args = messageArray.slice(1);
         if (!message.member.permissions.has("BAN_MEMBERS")) return message.reply("Denkst du im ernst ich erlaube dir einen meiner Mitglieder zu bannen???").catch(console.error())

@@ -89,17 +89,17 @@ Ein Teammitglied wird sich dann so schnell wie möglich um dein Ticket kümmern 
                         parent: '851073689432883251',
                     }).then(channel => {
                         channel.permissionOverwrites.set([{
-                                id: Interaction.user.id,
-                                allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
-                            {
-                                id: Interaction.guild.roles.everyone,
-                                deny: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
-                            {
-                                id: Interaction.guild.roles.cache.get('851078241199849512'),
-                                allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
+                            id: Interaction.user.id,
+                            allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
+                        {
+                            id: Interaction.guild.roles.everyone,
+                            deny: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
+                        {
+                            id: Interaction.guild.roles.cache.get('851078241199849512'),
+                            allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
                         ]).catch(console.error)
                         channel.send({
                             embeds: [embed],
@@ -131,17 +131,17 @@ Solltest du ein Problem haben, so schildere uns dies doch hier im Ticket. Ein Te
                         parent: '851073689432883251',
                     }).then(channel => {
                         channel.permissionOverwrites.set([{
-                                id: Interaction.user.id,
-                                allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
-                            {
-                                id: Interaction.guild.roles.everyone,
-                                deny: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
-                            {
-                                id: Interaction.guild.roles.cache.get('912136690976571402'),
-                                allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
+                            id: Interaction.user.id,
+                            allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
+                        {
+                            id: Interaction.guild.roles.everyone,
+                            deny: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
+                        {
+                            id: Interaction.guild.roles.cache.get('912136690976571402'),
+                            allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
                         ]).catch(console.error)
                         channel.send({
                             embeds: [embed],
@@ -174,17 +174,17 @@ Ein Teammitglied wird sich dann so schnell wie möglich um dein Ticket kümmern 
                         parent: '851073689432883251',
                     }).then(channel => {
                         channel.permissionOverwrites.set([{
-                                id: Interaction.user.id,
-                                allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
-                            {
-                                id: Interaction.guild.roles.everyone,
-                                deny: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
-                            {
-                                id: Interaction.guild.roles.cache.get('851078241199849512'),
-                                allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
+                            id: Interaction.user.id,
+                            allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
+                        {
+                            id: Interaction.guild.roles.everyone,
+                            deny: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
+                        {
+                            id: Interaction.guild.roles.cache.get('851078241199849512'),
+                            allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
                         ]).catch(console.error)
                         channel.send({
                             embeds: [embed],
@@ -216,17 +216,17 @@ Ein Teammitglied wird sich dann so schnell wie möglich um dein Ticket kümmern 
                         parent: '851073689432883251',
                     }).then(channel => {
                         channel.permissionOverwrites.set([{
-                                id: Interaction.user.id,
-                                allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
-                            {
-                                id: Interaction.guild.roles.everyone,
-                                deny: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
-                            {
-                                id: Interaction.guild.roles.cache.get('851078241199849512'),
-                                allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
+                            id: Interaction.user.id,
+                            allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
+                        {
+                            id: Interaction.guild.roles.everyone,
+                            deny: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
+                        {
+                            id: Interaction.guild.roles.cache.get('851078241199849512'),
+                            allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
                         ]).catch(console.error)
                         channel.send({
                             embeds: [embed],
@@ -257,17 +257,17 @@ Ein Teammitglied wird sich dann so schnell wie möglich um dein Ticket kümmern 
                         parent: '851073689432883251',
                     }).then(channel => {
                         channel.permissionOverwrites.set([{
-                                id: Interaction.user.id,
-                                allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
-                            {
-                                id: Interaction.guild.roles.everyone,
-                                deny: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
-                            {
-                                id: Interaction.guild.roles.cache.get('851078241199849512'),
-                                allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
-                            },
+                            id: Interaction.user.id,
+                            allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
+                        {
+                            id: Interaction.guild.roles.everyone,
+                            deny: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
+                        {
+                            id: Interaction.guild.roles.cache.get('851078241199849512'),
+                            allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
+                        },
                         ]).catch(console.error)
                         channel.send({
                             embeds: [embed],

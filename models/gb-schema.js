@@ -14,7 +14,7 @@ const schema = new Schema(
 
     {
 
-        name: { type: String},
+        name: { type: String },
 
         userId: { type: String },
 

@@ -7,15 +7,15 @@ module.exports = {
     description: 'Gives user the Partner role',
     execute: async (client, message, args, prefix, Discord) => {
         const fail = new MessageEmbed()
-        .setTitle(`**Moderation** ➽║ **partner**`)
-        .setColor("RED")
-        .setDescription("Mit diesem Befehl kann ein Partner Manager einem Mitglied die Partner Rolle vergeben.")
-        .addFields(
-            { name: `\`Anwendung\``, value: `➽ #partner @User\n➽ #partner UserId`, inline: true},
-            { name: `\`Beispiel\``, value: `➽ #partner ${client.user}\n➽ #partner ${client.user.id}`, inline: true},
-            { name: `\`Benötigte Permissions\``, value: "➽ Partner Manager"}
-        )
-        .setTimestamp();
+            .setTitle(`**Moderation** ➽║ **partner**`)
+            .setColor("RED")
+            .setDescription("Mit diesem Befehl kann ein Partner Manager einem Mitglied die Partner Rolle vergeben.")
+            .addFields(
+                { name: `\`Anwendung\``, value: `➽ #partner @User\n➽ #partner UserId`, inline: true },
+                { name: `\`Beispiel\``, value: `➽ #partner ${client.user}\n➽ #partner ${client.user.id}`, inline: true },
+                { name: `\`Benötigte Permissions\``, value: "➽ Partner Manager" }
+            )
+            .setTimestamp();
         // Assing partner role
         const guild = client.guilds.cache.get('851071074736144415');
         const role = guild.roles.cache.get('915369355087339570')

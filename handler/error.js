@@ -4,7 +4,7 @@ const client = require("../index").Client
 
 // HANDLING
 client.on('rateLimit', (info) => {
-    console.log(`Rate limit hit ${info.timeDifference ? info.timeDifference : info.timeout ? info.timeout: 'Unknown timeout '}, ${moment.utc().format("dddd, MMMM Do YYYY, hh:mm:ss")}`).catch(console.error)
+    console.log(`Rate limit hit ${info.timeDifference ? info.timeDifference : info.timeout ? info.timeout : 'Unknown timeout '}, ${moment.utc().format("dddd, MMMM Do YYYY, hh:mm:ss")}`).catch(console.error)
 });
 
 client.on("error", function (error) {

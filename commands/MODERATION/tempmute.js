@@ -69,20 +69,17 @@ module.exports = {
                         embeds: [embed]
                     }).catch(console.error())
                     setTimeout(function () {
-                        if (!toMute.roles.cache.some(role => role.id === '912170871760752661')) {
-                            return
-                        }
                         try {
-                            toMute.roles.remove(role).catch(console.error());
+                            toMute.roles.remove(role).catch(console.log());
                             const embed = new MessageEmbed()
                                 .setTitle(`<a:LX_allaarrrmmmm:921527940439740486> Eins unserer Mitglieder wurde entmuted! <a:LX_allaarrrmmmm:921527940439740486>`)
                                 .setDescription(`<a:LX_haken:912459313518379028> ➽║ ${toMute} wurde entmuted\n\nGrund: **Timeout zeit ist vorbei.**`)
                                 .setColor("RED")
                             message.channel.send({
                                 embeds: [embed]
-                            }).catch(console.error())
+                            }).catch(console.log())
                         } catch (err) {
-                            return console.error()
+                            console.log(err)
                         }
                     }, ms(time));
                 } else {
@@ -97,20 +94,17 @@ module.exports = {
                         embeds: [embed]
                     }).catch(console.error())
                     setTimeout(function () {
-                        if (!toMute.roles.cache.some(role => role.id === '912170871760752661')) {
-                            return
-                        }
                         try {
-                            toMute.roles.remove(role).catch(console.error());
+                            toMute.roles.remove(role).catch(console.log());
                             const embed = new MessageEmbed()
                                 .setTitle(`<a:LX_allaarrrmmmm:921527940439740486> Eins unserer Mitglieder wurde entmuted! <a:LX_allaarrrmmmm:921527940439740486>`)
                                 .setDescription(`<a:LX_haken:912459313518379028> ➽║ ${toMute} wurde entmuted\n\nGrund: **Timeout zeit ist vorbei.**`)
                                 .setColor("RED")
                             message.channel.send({
                                 embeds: [embed]
-                            }).catch(console.error())
+                            }).catch(console.log())
                         } catch (err) {
-                            return console.error()
+                            console.log(err)
                         }
                     }, ms(time));
                 }

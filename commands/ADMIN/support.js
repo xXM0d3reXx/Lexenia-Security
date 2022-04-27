@@ -16,9 +16,9 @@ module.exports = {
         const row = new MessageActionRow()
             .addComponents(
                 new MessageSelectMenu()
-                .setCustomId('select')
-                .setPlaceholder('Nichts ausgewählt')
-                .addOptions([{
+                    .setCustomId('select')
+                    .setPlaceholder('Nichts ausgewählt')
+                    .addOptions([{
                         label: 'Dm Werbung Reporten',
                         emoji: {
                             "name": "1️⃣"
@@ -53,7 +53,7 @@ module.exports = {
                         },
                         value: '➽║ Allgemein',
                     },
-                ]),
+                    ]),
             );
         const embed = new MessageEmbed()
             .setTitle(`**Du brauchst Hilfe oder hast eine Frage? **`)

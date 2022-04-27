@@ -11,7 +11,7 @@ module.exports = {
                 .setColor('GREEN')
                 .setDescription("Glückwunsch! Wir haben uns dazu entschieden dein Vorschlag anzunehmen, und werden diesen bald umsetzen.")
                 .setImage('https://fcothmarsingen.ch/wp-content/uploads/2021/05/angenommen.png')
-                message.channel.send({
+            message.channel.send({
                 embeds: [embed]
             }).catch(console.error());
             message.delete().catch(console.error())

@@ -7,15 +7,15 @@ module.exports = {
     description: 'Verifys a Member',
     execute: async (client, message, args, prefix, Discord) => {
         const fail = new MessageEmbed()
-        .setTitle(`**Moderation** ➽║ **verify**`)
-        .setColor("RED")
-        .setDescription("Mit diesem Befehl kann ein Teammitglied ein Mitglied verifizieren.")
-        .addFields(
-            { name: `\`Anwendung\``, value: `➽ #verify @User\n➽ #verify UserId`, inline: true},
-            { name: `\`Beispiel\``, value: `➽ #verify ${client.user}\n➽ #verify ${client.user.id}`, inline: true},
-            { name: `\`Benötigte Permissions\``, value: "➽ MANAGE_MESSAGES"}
-        )
-        .setTimestamp();
+            .setTitle(`**Moderation** ➽║ **verify**`)
+            .setColor("RED")
+            .setDescription("Mit diesem Befehl kann ein Teammitglied ein Mitglied verifizieren.")
+            .addFields(
+                { name: `\`Anwendung\``, value: `➽ #verify @User\n➽ #verify UserId`, inline: true },
+                { name: `\`Beispiel\``, value: `➽ #verify ${client.user}\n➽ #verify ${client.user.id}`, inline: true },
+                { name: `\`Benötigte Permissions\``, value: "➽ MANAGE_MESSAGES" }
+            )
+            .setTimestamp();
         if (message.channel.type !== "DM") {
 
             if (message && !message.author.bot) {
@@ -39,7 +39,7 @@ Wir hoffen du wirst hier Spaß haben! <a:LX_laughboom:912460061052391516>`).catc
                         userId: toVerify.id,
                         guildId: message.guild.id
                     });
-                }data.save();
+                } data.save();
             };
         };
     }

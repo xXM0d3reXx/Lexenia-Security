@@ -10,14 +10,14 @@ module.exports = {
     description: 'Used for antiraid',
     execute: async (client, message, args, prefix, Discord) => {
         const fail = new MessageEmbed()
-        .setTitle(`**Moderation** ➽║ **antiraid**`)
-        .setColor("RED")
-        .setDescription("Mit diesem Befehl kann ein Teammitglied den server in Quarantäne stecken.")
-        .addFields(
-            { name: `\`Anwendung\``, value: `➽ #antiraid on\n➽ #antiraid off\n➽ #antiraid list`, inline: true},
-            { name: `\`Benötigte Permissions\``, value: "➽ MANAGE_MESSAGES"}
-        )
-        .setTimestamp();
+            .setTitle(`**Moderation** ➽║ **antiraid**`)
+            .setColor("RED")
+            .setDescription("Mit diesem Befehl kann ein Teammitglied den server in Quarantäne stecken.")
+            .addFields(
+                { name: `\`Anwendung\``, value: `➽ #antiraid on\n➽ #antiraid off\n➽ #antiraid list`, inline: true },
+                { name: `\`Benötigte Permissions\``, value: "➽ MANAGE_MESSAGES" }
+            )
+            .setTimestamp();
 
         if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.reply("Denkst du im ernst ich erlaube dir meinen Server in Quarantäne zu stecken???").catch(console.error())
 
