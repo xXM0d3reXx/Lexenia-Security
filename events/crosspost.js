@@ -6,7 +6,7 @@ client.on('messageCreate', (message) => {
     } = message
     if (channel.type === 'GUILD_NEWS') {
         try {
-        message.crosspost()
-            } catch (err) { console.log(err) }
+            message.crosspost()
+        } catch (err) { console.log(err) }
     };
 });
