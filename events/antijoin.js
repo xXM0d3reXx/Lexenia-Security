@@ -10,13 +10,13 @@ client.on("guildMemberAdd", async (member) => {
         getCollection.push(member.user)
     }
     try {
-        member.send("Unser Antijoin wegen raid war an. Falls Sie zu unrecht gekickt wurden, joinen sie bei zeiten einfach nochmal.").catch(console.error())
+        member.send("Unser Antijoin wegen raid war an. Falls Sie zu unrecht gekickt wurden, joinen sie bei zeiten einfach nochmal.")
     } catch (err) {
-        console.error()
+        console.log(err)
     }
     try {
         member.kick("Antijoin war an.").catch(console.error())
     } catch (err) {
-        console.error()
+        console.log(err)
     }
 })
