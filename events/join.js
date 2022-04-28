@@ -118,6 +118,7 @@ Wir hoffen du wirst hier Spaß haben! <a:LX_laughboom:912460061052391516>`)
                             guildId: msg.guild.id
                         });
                     } catch (err) { console.log(err) }
+                    }
                     data.save();
                 } catch (err) {
                     if (member.roles.cache.some(role => role.id === '912195069627498567')) {
