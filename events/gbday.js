@@ -25,7 +25,7 @@ client.on("ready", () => {
                 month: monthCount
             }).exec((err, res) => {
                 if (err) {
-                    console.log(err)
+                    return console.log(err)
                 }
                 if (res.length === 0) {
                     return
