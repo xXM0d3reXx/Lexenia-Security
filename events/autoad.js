@@ -38,19 +38,27 @@ https://discord.gg/lexenia`);
 
         var hour3 = new Date().getHours()
         if (hour3 === 1) {
-            channel.send(text).catch(console.error())
+            try {
+            channel.send(text)
+                } catch (err) { console.log(err) }
         };
         var hour9 = new Date().getHours()
         if (hour9 === 7) {
-            channel.send(text).catch(console.error())
+            try {
+            channel.send(text)
+                } catch (err) { console.log(err) }
         };
         var hour15 = new Date().getHours()
         if (hour15 === 13) {
-            channel.send(text).catch(console.error())
+            try {
+            channel.send(text)
+                } catch (err) { console.log(err) }
         };
         var hour21 = new Date().getHours()
         if (hour21 === 19) {
-            channel.send(text).catch(console.error())
+            try {
+            channel.send(text)
+                } catch (err) { console.log(err) }
         };
     }, 60 * 1000 * 60);
 })
