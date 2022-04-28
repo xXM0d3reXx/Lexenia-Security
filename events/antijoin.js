@@ -15,7 +15,7 @@ client.on("guildMemberAdd", async (member) => {
         console.log(err)
     }
     try {
-        member.kick("Antijoin war an.").catch(console.error())
+        member.kick("Antijoin war an.")
     } catch (err) {
         console.log(err)
     }
