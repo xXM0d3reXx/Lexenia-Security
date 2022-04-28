@@ -28,7 +28,7 @@ client.on('guildMemberAdd', async (member) => {
     safeshema.find({
         userId: member.id
     }, async (err, data) => {
-        if (err) throw err;
+        if (err) {console.log(err)}
         if (data.length == 1) {
             member.roles.add(safe).catch(console.error())
             chan.send(`Heeyy <@${member.id}>, willkommen auf 𝕃𝔼𝕏𝔼ℕ𝕀𝔸! <a:LX_wave:912478975421481030>
@@ -37,13 +37,8 @@ Wir hoffen du wirst hier Spaß haben! <a:LX_laughboom:912460061052391516>`).catc
 
 
         if (data.length == 0) {
-            //NO PROFILE
-            if (!member.user.defaultAvatarURL) {
-                await channel.send(`<@${member.id}>, ${member.id} hat kein Profilbild`).catch(console.error());
-                member.kick("Account hat kein Profilbild.").catch(console.error())
-
-                //TO YOUNG
-            } else if (Date.now() - member.user.createdAt < 1000 * 60 * 60 * 24 * 14) {
+            //TO YOUNG
+            if (Date.now() - member.user.createdAt < 1000 * 60 * 60 * 24 * 14) {
                 await channel.send(`<@${member.id}>, ${member.id} ist zu jung.`).catch(console.error());
                 member.kick("Account ist zu jung").catch(console.error())
 
