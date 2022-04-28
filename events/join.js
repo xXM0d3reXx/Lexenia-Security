@@ -28,53 +28,67 @@ client.on('guildMemberAdd', async (member) => {
     safeshema.find({
         userId: member.id
     }, async (err, data) => {
-        if (err) {console.log(err)}
+        if (err) {return console.log(err)}
         if (data.length == 1) {
-            member.roles.add(safe).catch(console.error())
+            try {
+            member.roles.add(safe)
+                } catch (err) { console.log(err) }
+            try {
             chan.send(`Heeyy <@${member.id}>, willkommen auf 𝕃𝔼𝕏𝔼ℕ𝕀𝔸! <a:LX_wave:912478975421481030>
-Wir hoffen du wirst hier Spaß haben! <a:LX_laughboom:912460061052391516>`).catch(console.error())
+Wir hoffen du wirst hier Spaß haben! <a:LX_laughboom:912460061052391516>`)
+                } catch (err) { console.log(err) }
         }
 
 
         if (data.length == 0) {
             //TO YOUNG
             if (Date.now() - member.user.createdAt < 1000 * 60 * 60 * 24 * 14) {
-                await channel.send(`<@${member.id}>, ${member.id} ist zu jung.`).catch(console.error());
-                member.kick("Account ist zu jung").catch(console.error())
+                try {
+                channel.send(`<@${member.id}>, ${member.id} ist zu jung.`)
+                    } catch (err) { console.log(err) }
+                try {
+                member.kick("Account ist zu jung")
+                    } catch (err) { console.log(err) }
 
                 //VERIFY
             } else if (Date.now() - member.user.createdAt > 1000 * 60 * 60 * 24 * 14 + 1) {
+                try {
                 const captcha = new Captcha();
                 captcha.async = true;
                 captcha.addDecoy();
                 captcha.drawTrace();
                 captcha.drawCaptcha();
-
+                    } catch (err) { console.log(err) }
+                try {
                 const captchaAttachment = new MessageAttachment(
                     await captcha.png,
                     "captcha.png"
-                );
-
+                )
+                    } catch (err) { console.log(err) }
+                   try {
                 const captchaEmbed = new MessageEmbed()
                     .setTitle(`<a:LX_allaarrrmmmm:921527940439740486> **Verifizierung** <a:LX_allaarrrmmmm:921527940439740486>`)
                     .setDescription(`➽║ <@${member.id}> Aus Sicherheit für Sie und für uns vervollständigen Sie bitte folgenden Captcha. Danke!`)
                     .setColor("RANDOM")
                     .setImage("attachment://captcha.png")
                     .setFooter("Falls du keinen Captcha auffindest, bitte ein Team Mitglied pingen um Verifiziert zu werden.", 'https://cdn.discordapp.com/attachments/913146795532640326/925545664438480937/lexenia-pb.gif')
-
+                    } catch (err) { console.log(err) }
 
                 //JOIN MESSAGE
+                try {
                 const msg = await channell.send({
                     files: [captchaAttachment],
                     embeds: [captchaEmbed],
-                }).catch(console.error());
+                })
+                } catch (err) { console.log(err) }
 
 
                 //WRONG ANSWER
                 const filter = (message) => {
                     if (message.author.id !== member.id) return;
                     if (message.content === captcha.text) return true;
-                    else channell.send(`<a:LX_kreuz:917141623777939537> ➽║ <@${member.id}> Das von Ihnen angegebene Captcha ist falsch. Versuchen Sie es bitte erneut.`).catch(console.error())
+                    else try { channell.send(`<a:LX_kreuz:917141623777939537> ➽║ Das von Ihnen angegebene Captcha ist falsch. Versuchen Sie es bitte erneut.`)
+                              } catch (err) { console.log(err) }
                 }
 
                 //TIMING
@@ -87,10 +101,17 @@ Wir hoffen du wirst hier Spaß haben! <a:LX_laughboom:912460061052391516>`).catc
                     });
                     //ROLES ADD AND ERROR CHECKING
                     if (response) {
-                        await member.roles.add(safe).catch(console.error());
+                        try {
+                        member.roles.add(safe)
+                            } catch (err) { console.log(err) }
+                        try {
                         chan.send(`Heeyy <@${member.id}>, willkommen auf 𝕃𝔼𝕏𝔼ℕ𝕀𝔸! <a:LX_wave:912478975421481030>
-Wir hoffen du wirst hier Spaß haben! <a:LX_laughboom:912460061052391516>`).catch(console.error());
-                        channell.send(`<a:LX_haken:912459313518379028> ➽║ Der User <@${member.id}> wurde erfolgreich verifiziert!`).catch(console.error());
+Wir hoffen du wirst hier Spaß haben! <a:LX_laughboom:912460061052391516>`)
+                            } catch (err) { console.log(err) }
+                        try {
+                        channell.send(`<a:LX_haken:912459313518379028> ➽║ Der User <@${member.id}> wurde erfolgreich verifiziert!`)
+                            } catch (err) { console.log(err) }
+                        try {
                         data = new safeshema({
                             name: member.username,
                             userId: member.id,
@@ -98,11 +119,14 @@ Wir hoffen du wirst hier Spaß haben! <a:LX_laughboom:912460061052391516>`).catc
                         });
                     }
                     data.save();
+                        } catch (err) { console.log(err) }
                 } catch (err) {
                     if (member.roles.cache.some(role => role.id === '912195069627498567')) {
                         return
                     } else {
-                        return channell.send(`<a:LX_kreuz:917141623777939537> ➽║ <@${member.id}> Sie haben sich nicht in der von uns vorgegeben zeit Verifiziert.`).catch(console.error());
+                        try {
+                        channell.send(`<a:LX_kreuz:917141623777939537> ➽║ <@${member.id}> Sie haben sich nicht in der von uns vorgegeben zeit Verifiziert.`)
+                            } catch (err) { console.log(err) }
                     }
                 }
             }
