@@ -37,15 +37,11 @@ client.on("ready", () => {
                         reply += `**<@${userId}>** hat **heute** Geburtstag - Wir wünschen dir einen **schönen Geburtstag**, eine **tolle Feier (mit Freunden, Familie oder/und uns)**  & viele **tolle Geschenke** <:LX_doglaugh:912458647701950484>\n\n`
                         try {
                             const member = await guild.members.fetch(userId)
-                        } catch (err) { console.log(err) }
-                        try {
                             await member.roles.add('928973585530388490')
-                        } catch (err) { console.log(err) }
-                        setInterval(async function () {
-                            try {
+                            setInterval(async function () {
                                 member.roles.remove('928973585530388490')
-                            } catch (err) { console.log(err) }
-                        }, 60 * 1000 * 60 * 24)
+                            }, 60 * 1000 * 60 * 24)
+                        } catch (err) { console.log(err) }
                     });
 
 
@@ -73,15 +69,11 @@ client.on("ready", () => {
                         reply += `**<@${userId}>**,`
                         try {
                             const member = await guild.members.fetch(userId)
-                        } catch (err) { console.log(err) }
-                        try {
                             await member.roles.add('928973585530388490')
-                        } catch (err) { console.log(err) }
-                        setInterval(async function () {
-                            try {
+                            setInterval(async function () {
                                 member.roles.remove('928973585530388490')
-                            } catch (err) { console.log(err) }
-                        }, 60 * 1000 * 60 * 24)
+                            }, 60 * 1000 * 60 * 24)
+                        } catch (err) { console.log(err) }
                     });
 
 
