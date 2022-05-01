@@ -30,11 +30,9 @@ client.on('guildMemberAdd', async (member) => {
     }, async (err, data) => {
         if (err) { return console.log(err) }
         if (data.length == 1) {
-            try {
-                member.roles.add(safe)
-                chan.send(`Heeyy <@${member.id}>, willkommen auf 𝕃𝔼𝕏𝔼ℕ𝕀𝔸! <a:LX_wave:912478975421481030>
+            member.roles.add(safe)
+            chan.send(`Heeyy <@${member.id}>, willkommen auf 𝕃𝔼𝕏𝔼ℕ𝕀𝔸! <a:LX_wave:912478975421481030>
 Wir hoffen du wirst hier Spaß haben! <a:LX_laughboom:912460061052391516>`)
-            } catch (err) { console.log(err) }
         }
 
 
